@@ -17,6 +17,7 @@ export class MicroTaskScheduler {
 
   stop() {
     this.stopped = true;
+    this.executionQueue = [];
     window.removeEventListener('message', this.handleMessage, true);
   }
 
